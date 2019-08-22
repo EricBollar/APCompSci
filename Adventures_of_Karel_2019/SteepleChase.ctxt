@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=SteepleChase
+comment1.params=
+comment1.target=void\ turnRight()
+comment2.params=
+comment2.target=void\ jumpHurdle()
+comment3.params=
+comment3.target=void\ ascendHurdle()
+comment4.params=
+comment4.target=void\ descendHurdle()
+comment5.params=
+comment5.target=void\ run()
+numComments=6

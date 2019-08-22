@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=CleanStairs
+comment1.params=
+comment1.target=void\ run()
+comment2.params=
+comment2.target=void\ climbStaircase()
+comment3.params=
+comment3.target=void\ stepUp()
+comment4.params=
+comment4.target=void\ turnRight()
+numComments=5

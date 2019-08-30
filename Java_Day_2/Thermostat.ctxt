@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Thermostat
+comment1.params=min\ max
+comment1.target=Thermostat(int,\ int)
+comment2.params=
+comment2.target=void\ warmer()
+comment3.params=
+comment3.target=void\ colder()
+comment4.params=
+comment4.target=int\ getValue()
+numComments=5

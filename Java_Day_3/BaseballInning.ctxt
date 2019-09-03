@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=initialBatterPosition
+comment0.target=BaseballInning(int)
+comment1.params=
+comment1.target=int\ getRuns()
+comment2.params=
+comment2.target=int\ getOuts()
+comment3.params=
+comment3.target=void\ batterOut()
+comment4.params=numBases
+comment4.target=void\ batterBaseHit(int)
+comment5.params=
+comment5.target=java.lang.String\ getCurrentBatter()
+comment6.params=
+comment6.target=java.lang.String\ getBaseRunners()
+comment7.params=
+comment7.target=void\ nextBatter()
+comment8.params=numBases
+comment8.target=void\ printHitErrorMessage(int)
+comment9.params=
+comment9.target=void\ printOutErrorMessage()
+numComments=10

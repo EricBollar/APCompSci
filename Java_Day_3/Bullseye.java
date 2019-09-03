@@ -2,7 +2,11 @@
 import acm.program.*;
 import acm.graphics.*;
 import java.awt.Color;
-import java.awt.event.*;
+import java.awt.event.*; 
+
+// Eric Bollar
+// AP CS
+// September 3, 2019
 
 public class Bullseye extends GraphicsProgram
 {
@@ -13,7 +17,17 @@ public class Bullseye extends GraphicsProgram
 
     public void run()
     {
-        
+        for (int i = NUMRINGS; i > 0; i--) {
+            GOval circle = new GOval(INITIALX - i * RINGWIDTH, INITIALY - i * RINGWIDTH,
+                                     RINGWIDTH * 2 * i, RINGWIDTH * 2 * i);
+            circle.setFilled(true);
+            if (i % 2 == 0) {
+                circle.setColor(Color.red);
+            } else {
+                circle.setColor(Color.gray);
+            }
+            add(circle);
+        }
     }
 
 }

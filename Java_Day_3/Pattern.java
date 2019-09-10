@@ -14,7 +14,7 @@ public class Pattern extends GraphicsProgram
     private static final double STARTY = 40;
     private static final int NUMSTRIPES = 100;
     private static final double WIDTH = 380;
-    private static final double STRIPEHEIGHT = 4;
+    private static final double STRIPEHEIGHT = 50;
 
     public void run()
     {

@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 public class Stoplight extends GraphicsProgram
 {
-    private static final double BULB_RADIUS = 15; 
+    private static final double BULB_RADIUS = 30; 
     private static final double WINDOW_WIDTH = 754; 
     private static final double WINDOW_HEIGHT = 492;
 

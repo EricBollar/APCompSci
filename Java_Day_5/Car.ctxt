@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Car
+comment1.params=theMPG\ theTankSize
+comment1.target=Car(double,\ double)
+comment2.params=numGallons
+comment2.target=void\ fillup(double)
+comment3.params=miles
+comment3.target=void\ drive(double)
+comment4.params=
+comment4.target=int\ getGasGauge()
+comment5.params=
+comment5.target=double\ getOdometer()
+numComments=6

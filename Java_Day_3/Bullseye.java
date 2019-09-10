@@ -17,6 +17,18 @@ public class Bullseye extends GraphicsProgram
 
     public void run()
     {
+        for (int i = 0; i < NUMRINGS; i++) {
+            GOval circle = new GOval(INITIALX - (NUMRINGS - i) * RINGWIDTH, INITIALY - (NUMRINGS - i) * RINGWIDTH,
+                                     RINGWIDTH * 2 * (NUMRINGS - i), RINGWIDTH * 2 * (NUMRINGS - i));
+            circle.setFilled(true);
+            if (i % 2 == 0) {
+                circle.setColor(Color.red);
+            } else {
+                circle.setColor(Color.gray);
+            }
+            add(circle);
+        }
+        /* normal way
         for (int i = NUMRINGS; i > 0; i--) {
             GOval circle = new GOval(INITIALX - i * RINGWIDTH, INITIALY - i * RINGWIDTH,
                                      RINGWIDTH * 2 * i, RINGWIDTH * 2 * i);
@@ -27,7 +39,7 @@ public class Bullseye extends GraphicsProgram
                 circle.setColor(Color.gray);
             }
             add(circle);
-        }
+        }*/
     }
 
 }

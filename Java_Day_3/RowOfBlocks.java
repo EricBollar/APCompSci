@@ -4,6 +4,10 @@ import acm.graphics.*;
 import java.awt.Color;
 import java.awt.event.*;
 
+// Eric Bollar
+// AP CS
+// September 4, 2019
+
 public class RowOfBlocks extends GraphicsProgram
 {
     private static final int START_X = 25;

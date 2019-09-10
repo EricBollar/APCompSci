@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=initialChannel
+comment0.target=HotelTelevision(int)
+comment1.params=
+comment1.target=void\ channelUp()
+comment2.params=
+comment2.target=void\ channelDown()
+comment3.params=whichChannel
+comment3.target=void\ setChannel(int)
+comment4.params=
+comment4.target=int\ getChannel()
+comment5.params=
+comment5.target=java.lang.String\ getChannelName()
+numComments=6

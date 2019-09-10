@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Breakout
+comment1.params=
+comment1.target=void\ run()
+comment1.text=Runs\ the\ Breakout\ program.
+comment10.params=
+comment10.target=void\ saveHighScore()
+comment11.params=
+comment11.target=int\ readHighScore()
+comment2.params=
+comment2.target=void\ setupScore()
+comment3.params=
+comment3.target=void\ updateScore()
+comment4.params=
+comment4.target=void\ checkForCollisions()
+comment5.params=
+comment5.target=void\ updateBall()
+comment6.params=
+comment6.target=void\ initBall()
+comment7.params=e
+comment7.target=void\ mouseMoved(java.awt.event.MouseEvent)
+comment8.params=
+comment8.target=void\ initPaddle()
+comment8.text=\ below\ does\ not\ work\ yet\n\ \ \ \ public\ void\ keyPressed(KeyEvent\ k)\ {\n\ \ \ \ \ \ \ \ int\ keyCode\ \=\ k.getKeyCode();\n\ \ \ \ \ \ \ \ int\ buffer\ \=\ 20;\n\ \ \ \ \ \ \ \ if\ (keyCode\ \=\=\ 0x7C)\ {\n\ \ \ \ \ \ \ \ \ \ \ \ if\ (PADDLE_WIDTH\ *\ 0.5\ -\ buffer\ >\ -buffer)\ {\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ paddle.setLocation(paddle.getX()\ -\ 2,\ paddle.getY());\n\ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ }\n\ \ \ \ }\n
+comment9.params=
+comment9.target=void\ initBricks()
+numComments=12

@@ -8,6 +8,7 @@ import java.awt.event.*;
 import java.io.*;
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.awt.event.KeyEvent;
 
 // Eric Bollar
 // AP CS Period A
@@ -57,47 +58,80 @@ public class Breakout extends GraphicsProgram
     private static final int NTURNS = 3;
 
  /** Global variables declared here.  You should feel free to add others as needed. */
-     GRect paddle;
-     GOval ball;
-     GLabel scoreLabel;
-     GLabel highScoreLabel;
+     GRect paddle; // the paddle
+     GOval ball; // the ball
+     GLabel scoreLabel; // the player's current score
+     GLabel highScoreLabel; // the player's highest score
+     GLabel tipsLabel; // helpful tips that scroll across the bottom below the paddle
+     String[] tips = new String[4];
+     boolean changeTip = false;
      double dx;
      double dy;
      boolean RUNNING = true;
      int score = 0;
      int highScore = 0;
      boolean newRecord = false;
+     AudioClip bounceClip = MediaTools.loadAudioClip("bounce.au");
+     Font font = new Font("Arial", Font.PLAIN, 15); // the font used for all the labels
     
 /** Runs the Breakout program. */
     public void run() 
     {
-        initBricks();
-        initPaddle();
-        initBall();
-        //addMouseListeners();
-        addKeyListeners();
-        highScore = readHighScore();
-        setupScore();
-        saveHighScore();
-        while (RUNNING) {
-            updateBall();
-            checkForCollisions();
-            pause(5);
+        initBricks(); // creates the rows of bricks
+        initPaddle(); // creates the paddle
+        initBall(); // creates the ball
+        highScore = readHighScore(); // sets the value of highScore to the player's highscore
+        setupScore(); // creates the scoreLabel and the highScoreLabel
+        setupTips();
+        while (RUNNING) { // game loop
+            updateBall(); // update ball's position
+            checkForCollisions(); // implements the games "physics"
+            updateTips();
+            pause(5); // delay cause computers are too speedy
         }
+    }
+    
+    public void setupTips() {
+        tips[0] = "Tip: The paddle follows your mouse!";
+        tips[1] = "Tip: Every brick is worth 100 points!";
+        tips[2] = "Tip: Try and bounce the ball behind the bricks!";
+        tips[3] = "Tip: Your highest score is: " + highScore + "!";
+        
+        tipsLabel = new GLabel (tips[(int) (Math.random() * tips.length) - 1], WIDTH * 2, HEIGHT - PADDLE_Y_OFFSET * 2);
+        tipsLabel.setFont(font);
+        add(tipsLabel);
+    }
+    
+    public void updateTips() {
+        int scoreToChangeTip = 500;
+        if ((score + 100) % scoreToChangeTip == 0 && changeTip) {
+            tipsLabel.setText(tips[(int) (Math.random() * tips.length) - 1]);
+            changeTip = false;
+        } else if ((score + 100) % scoreToChangeTip != 0) {
+            changeTip = true;
+        }
+        
+        int buffer = 900; // basically the pause between when the tip label shows up again
+        if (tipsLabel.getX() > WIDTH + buffer) {
+            tipsLabel.setLocation(-tipsLabel.getWidth() - buffer , tipsLabel.getY());
+        }
+        tipsLabel.move(1, 0);
     }
     
     public void setupScore() {
         scoreLabel = new GLabel("Score: 0", 20, 20);
-        Font font = new Font("Arial", Font.PLAIN, 15);
         scoreLabel.setFont(font);
-        add(scoreLabel);
+        add(scoreLabel); // make a label for player's score
+        
         highScoreLabel = new GLabel("Highscore: " + highScore, WIDTH - 150, 20);
         highScoreLabel.setFont(font);
-        add(highScoreLabel);
+        add(highScoreLabel); // make a label for player's highscore
     }
     
     public void updateScore() {
         scoreLabel.setText("Score: " + score);
+        
+        // if a new record is set then set the highscorelabel to the player's current score
         if (score > highScore) {
             highScoreLabel.setText("NEW Highscore: " + score);
             highScore = score;
@@ -106,68 +140,115 @@ public class Breakout extends GraphicsProgram
     }
     
     public void checkForCollisions() {
-        if (ball.getX() < 0) {
-            dx = -dx;
-        } else if (ball.getX() > WIDTH - 2 * BALL_RADIUS) {
-            dx = -dx;
-        }
-        if (ball.getY() < 0) {
-            dy = -dy;
-        } else if (ball.getY() > HEIGHT) {
-            RUNNING = false;
-            GLabel gameover = new GLabel("Game Over!", WIDTH/2 - 80, HEIGHT/2);
-            Font font = new Font("Arial", Font.PLAIN, 36);
-            gameover.setFont(font);
-            add(gameover);
-            scoreLabel.setLocation(WIDTH/2 - 50, HEIGHT/2 + 20);
-            highScoreLabel.setLocation(WIDTH/2 - 50, HEIGHT/2 + 40);
-            if (newRecord) {
-                saveHighScore();
-            }
-        }
+        checkWallCollisions();
         
         // paddles and bricks
-        if (getElementAt(ball.getX(), ball.getY()) != null) { // top-left corner
-            if (getElementAt(ball.getX(), ball.getY()) == paddle) {
-                dy = -dy;
-            } else {
-                remove(getElementAt(ball.getX(), ball.getY()));
-                score += 100;
-                updateScore();
-                dy = -dy;
-            }
-        } else if (getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS) != null) { // bottom-left corner
-            if (getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS) == paddle) {
-                dy = -dy;
-            } else {
-                remove(getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS));
-                score += 100;
-                updateScore();
-                dy = -dy;
-            }
-        }else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY()) != null) { // top-right corner
-            if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY()) == paddle) {
-                dy = -dy;
-            } else {
-                remove(getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY()));
-                score += 100;
-                updateScore();
-                dy = -dy;
-            }
-        }else if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS) != null) { // bottom-right corner
-            if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS) == paddle) {
-                dy = -dy;
-            } else {
-                remove(getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS));
-                score += 100;
-                updateScore();
-                dy = -dy;
+        if (!checkCollisionTopLeft()) {
+            if (!checkCollisionTopRight()) {
+                if (!checkCollisionBottomLeft()) {
+                    checkCollisionBottomRight();
+                }
             }
         }
     }
     
+    public void checkWallCollisions() {
+        if (ball.getX() < 0) { // left wall
+            dx = -dx;
+        } else if (ball.getX() > WIDTH - 2 * BALL_RADIUS) { // right wall
+            dx = -dx;
+        }
+        if (ball.getY() < 0) { // top wall
+            dy = -dy;
+        } else if (ball.getY() > HEIGHT) { // bottom wall
+            RUNNING = false;
+            GLabel gameover = new GLabel("Game Over!", WIDTH/2 - 80, HEIGHT/2);
+            Font gFont = new Font("Arial", Font.PLAIN, 36);
+            gameover.setFont(gFont);
+            add(gameover);
+            scoreLabel.setLocation(WIDTH/2 - 50, HEIGHT/2 + 20);
+            highScoreLabel.setLocation(WIDTH/2 - 50, HEIGHT/2 + 40);
+            if (newRecord) {
+                saveHighScore(highScore);
+            }
+            remove(tipsLabel);
+        }
+    }
+    
+    public boolean checkCollisionTopLeft() {
+        if (getElementAt(ball.getX(), ball.getY()) != null) { // top-left corner
+            GObject g = getElementAt(ball.getX(), ball.getY());
+            if (g == paddle) {
+                dy = -dy;
+                ball.move(0, -2); // this prevents glitching where the ball gets "stuck" in the paddle
+            } else if (g != scoreLabel && g != highScoreLabel && g != tipsLabel){ // if it is a brick ...
+                remove(getElementAt(ball.getX(), ball.getY()));
+                score += 100;
+                updateScore();
+                dy = -dy;
+                bounceClip.play();
+            }
+            return true;
+        }
+        return false;
+    }
+    
+    public boolean checkCollisionBottomLeft() {
+        if (getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS) != null) { // bottom-left corner
+            GObject g = getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS);
+            if (g == paddle) {
+                dy = -dy;
+                ball.move(0, -2); // this prevents glitching where the ball gets "stuck" in the paddle
+            } else if (g != scoreLabel && g != highScoreLabel && g != tipsLabel){ // if it is a brick ...
+                remove(getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS));
+                score += 100;
+                updateScore();
+                dy = -dy;
+                bounceClip.play();
+            }
+            return true;
+        }
+        return false;
+    }
+    
+    public boolean checkCollisionTopRight() {
+        if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY()) != null) { // top-right corner
+            GObject g = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY());
+            if (g == paddle) {
+                dy = -dy;
+                ball.move(0, -2); // this prevents glitching where the ball gets "stuck" in the paddle
+            } else if (g != scoreLabel && g != highScoreLabel && g != tipsLabel) { // if it is a brick ...
+                remove(getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY()));
+                score += 100;
+                updateScore();
+                dy = -dy;
+                bounceClip.play();
+            }
+            return true;
+        }
+        return false;
+    }
+    
+    public boolean checkCollisionBottomRight() {
+        if (getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS) != null) { // bottom-right corner
+            GObject g = getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS);
+            if (g == paddle) {
+                dy = -dy;
+                ball.move(0, -2); // this prevents glitching where the ball gets "stuck" in the paddle
+            } else if (g != scoreLabel && g != highScoreLabel && g != tipsLabel){ // if it is a brick ...
+                remove(getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS));
+                score += 100;
+                updateScore();
+                dy = -dy;
+                bounceClip.play();
+            }
+            return true;
+        }
+        return false;
+    }
+    
     public void updateBall() {
-        ball.setLocation(ball.getX() + dx, ball.getY() + dy);
+        ball.move(dx, dy);
     }
     
     public void initBall() {
@@ -184,24 +265,16 @@ public class Breakout extends GraphicsProgram
         dy = 1;
     }
     
+    
     public void mouseMoved(MouseEvent e) {
-        int buffer = 20;
+        int buffer = 20; // this is how many pixels over the game border the paddle is allowed to go
+                         // (this helps with gameplay)
+        
+        // this just makes paddle stay witihin edges of game border
         if (e.getX() > PADDLE_WIDTH * 0.5 - buffer && e.getX() < WIDTH - PADDLE_WIDTH * 0.5 + buffer) {
             paddle.setLocation(e.getX() - 0.5 * PADDLE_WIDTH, paddle.getY());
         }
     }
-    
-    /* below does not work yet
-    public void keyPressed(KeyEvent k) {
-        int keyCode = k.getKeyCode();
-        int buffer = 20;
-        if (keyCode == 0x7C) {
-            if (PADDLE_WIDTH * 0.5 - buffer > -buffer) {
-                paddle.setLocation(paddle.getX() - 2, paddle.getY());
-            }
-        }
-    }
-    */
     
     public void initPaddle() {
         paddle = new GRect(WIDTH/2 - 0.5 * PADDLE_WIDTH, HEIGHT - PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
@@ -237,32 +310,46 @@ public class Breakout extends GraphicsProgram
        }
     }
     
-    public void saveHighScore()
+    public void saveHighScore(int i) // this writes an int to the breakoutScore text file
     {
-        String fileContent = "" + highScore;
+        String fileContent = "" + i;
         try {
-            FileWriter fileWriter = new FileWriter("/Users/ericbollar/Desktop/APCompSci/Breakout/breakoutScore.txt");
+            String fileName = "breakoutScore.txt";
+            String workingDirectory = System.getProperty("user.dir"); // this is just so that it's cross-platform
+            String absoluteFilePath = workingDirectory + File.separator + fileName;
+            
+            FileWriter fileWriter = new FileWriter(absoluteFilePath);
             fileWriter.write(fileContent);
             fileWriter.close();
         } catch (IOException e) {
-            System.out.println("Error :)");
+            // Error rip :(
         }
     }
     
-    public int readHighScore() {
-        int s = 0;
+    public int readHighScore() { // this returns the int value of the breakoutScore text file
+        int returnVal = 0;
         try {
-            Scanner sc = new Scanner(new File ("/Users/ericbollar/Desktop/APCompSci/Breakout/breakoutScore.txt"));
-            int i;
+            String fileName = "breakoutScore.txt";
+            String workingDirectory = System.getProperty("user.dir"); // this is just so that it's cross-platform
+            String absoluteFilePath = workingDirectory + File.separator + fileName;
+        
+            File file = new File(absoluteFilePath);
+
+            if (file.createNewFile()) {
+                saveHighScore(0);
+        } else {
             String text = "";
+            Scanner sc = new Scanner(file);
             while (sc.hasNextInt()) {
                 text += sc.nextInt();
             }
-            s = Integer.parseInt(text);
+            returnVal = Integer.parseInt(text);
+            }
         } catch (IOException e) {
-            System.out.println("Error :)");
+            highScore = -1;
+            // error :(
         }
-        return s;
+        return returnVal;
     }
    
 }

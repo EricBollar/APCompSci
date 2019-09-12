@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=ThermoScroller
+comment1.params=
+comment1.target=void\ run()
+comment2.params=
+comment2.target=void\ makeThermostat()
+comment3.params=e
+comment3.target=void\ mouseMoved(java.awt.event.MouseEvent)
+comment4.params=
+comment4.target=void\ moveText()
+comment5.params=
+comment5.target=void\ updateText()
+comment6.params=
+comment6.target=void\ makeText()
+comment7.params=
+comment7.target=void\ makeButtons()
+numComments=8

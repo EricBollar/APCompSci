@@ -1,7 +1,0 @@
-#BlueJ class context
-comment0.target=Trail
-comment1.params=
-comment1.target=void\ run()
-comment2.params=x\ y\ radius\ milliseconds
-comment2.target=Trail(double,\ double,\ int,\ int)
-numComments=3

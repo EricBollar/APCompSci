@@ -12,7 +12,7 @@ import java.awt.event.KeyEvent;
 
 // Eric Bollar
 // AP CS Period A
-// September 16, 2019
+// September 18, 2019
 
 public class Breakout extends GraphicsProgram 
 {
@@ -181,7 +181,7 @@ public class Breakout extends GraphicsProgram
     }
     
     public boolean checkCollision(GObject other) {
-        if (other != null) { // top-right corner
+        if (other != null) {
             if (other == paddle) {
                 if (dy > 0) {
                     dy = -dy;
@@ -216,11 +216,20 @@ public class Breakout extends GraphicsProgram
     
     /** Removes the brick and adjusts variables*/
     public void hitBrick(GObject g) {
+        bounceClip.play();
         remove(g);
+        if (g.getY() < ball.getY()) {
+            if (dy < 0) {
+                dy = -dy;
+            }
+        } else {
+            if (dy > 0) {
+                dy = -dy;
+            }
+        }
+        
         score += 100;
         updateScore();
-        dy = -dy;
-        bounceClip.play();
         bricksDestroyed++;
     }
     
@@ -364,7 +373,7 @@ public class Breakout extends GraphicsProgram
             fileWriter.write(fileContent);
             fileWriter.close();
         } catch (IOException e) {
-            // Error rip :(
+            // Error :(
         }
     }
     

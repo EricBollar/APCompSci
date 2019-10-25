@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=RandomWordGenerator
+comment1.params=
+comment1.target=java.lang.String\ getRandomWord()
+comment2.params=
+comment2.target=java.lang.String\ getRandomPhrase()
+comment3.params=filename
+comment3.target=java.lang.String\ getRandomThing(java.lang.String)
+numComments=4

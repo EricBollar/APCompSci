@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Paycheck
+comment1.params=hours\ rate
+comment1.target=Paycheck(double,\ double)
+comment2.params=
+comment2.target=double\ getAmount()
+numComments=3

@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=vec3D
+comment1.params=x\ y\ z
+comment1.target=vec3D(float,\ float,\ float)
+numComments=2

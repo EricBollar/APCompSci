@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=HangmanGame
+comment1.params=
+comment1.target=HangmanGame()
+comment2.params=
+comment2.target=java.lang.String\ getPuzzle()
+comment2.text=\ @return\ the\ "puzzle",\ with\ dashes\ for\ unguessed\ letters\ (eg,\ "HE--O\ WOR-D")\n
+comment3.params=
+comment3.target=java.lang.String\ getActualAnswer()
+comment3.text=\ @return\ the\ answer\ correct\ answer\ to\ this\ game\ of\ hangman\n
+comment4.params=
+comment4.target=java.lang.String\ getLettersGuessed()
+comment5.params=
+comment5.target=int\ getGuessesLeft()
+comment6.params=guess
+comment6.target=boolean\ makeGuess(java.lang.String)
+comment6.text=\ This\ method\ is\ called\ when\ the\ player\ makes\ a\ guess.\ \ The\ guess\ is\ added\ to\ the\ list\ of\ guessed\ letters.\n\ If\ it\ is\ a\ bad\ guess,\ then\ the\ player\ loses\ a\ guess\ (eg,\ has\ one\ fewer\ guess\ remaining).\n\ @param\ guess\ the\ letter\ that\ is\ guessed\n\ @return\ true\ if\ it\ is\ a\ good\ guess,\ false\ otherwise\n
+comment7.params=letter
+comment7.target=boolean\ isLetter(java.lang.String)
+comment7.text=\ helper\ method\ that\ determines\ whether\ or\ not\ a\ String\ is\ a\ letter\ of\ the\ alphabet\n\ @param\ letter\ a\ String\ with\ length\ of\ one,\ which\ may\ or\ may\ not\ be\ a\ letter\n\ @return\ true\ if\ it\ is\ a\ letter,\ false\ otherwise\n
+numComments=8

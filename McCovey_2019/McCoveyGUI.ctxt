@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=McCoveyGUI
+comment1.params=
+comment1.target=void\ init()
+comment2.params=
+comment2.target=void\ run()
+comment3.params=name
+comment3.target=void\ addPlayerClass(java.lang.String)
+comment4.params=e
+comment4.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment5.params=
+comment5.target=void\ beginGame()
+comment6.params=
+comment6.target=void\ updateGUIforGame()
+comment7.params=num1\ num2
+comment7.target=void\ setDiceIcon(int,\ int)
+numComments=8

@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=WaterPuzzle
+comment1.params=
+comment1.target=WaterPuzzle()
+comment2.params=jug
+comment2.target=void\ fill(java.lang.String)
+comment3.params=jug
+comment3.target=void\ empty(java.lang.String)
+comment4.params=
+comment4.target=void\ pourFromAToB()
+comment5.params=
+comment5.target=void\ pourFromBToA()
+comment6.params=jug
+comment6.target=int\ getAmount(java.lang.String)
+numComments=7

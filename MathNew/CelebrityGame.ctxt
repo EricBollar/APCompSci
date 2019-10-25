@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=CelebrityGame
+comment1.params=
+comment1.target=void\ run()
+comment2.params=s
+comment2.target=java.lang.String\ hint(java.lang.String)
+comment3.params=
+comment3.target=void\ clearScreen()
+numComments=4

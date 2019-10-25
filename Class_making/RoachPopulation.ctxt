@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=RoachPopulation
+comment1.params=startingNumRoaches
+comment1.target=RoachPopulation(int)
+comment2.params=
+comment2.target=void\ breed()
+comment3.params=
+comment3.target=void\ spray()
+comment4.params=
+comment4.target=int\ getNumRoaches()
+numComments=5

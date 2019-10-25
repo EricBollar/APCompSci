@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=LeapYear
+comment1.params=
+comment1.target=void\ run()
+comment2.params=year
+comment2.target=boolean\ isLeapYear(int)
+numComments=3

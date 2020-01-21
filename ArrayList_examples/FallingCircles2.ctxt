@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=FallingCircles2
+comment1.params=
+comment1.target=void\ run()
+comment2.params=event
+comment2.target=void\ mouseClicked(java.awt.event.MouseEvent)
+comment3.params=
+comment3.target=acm.graphics.GOval\ getRandomCircle()
+numComments=4

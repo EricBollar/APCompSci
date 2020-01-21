@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.params=
+comment0.target=PrettyGoodComputerPlayer()
+comment1.params=topCardInDiscardPile\ hand
+comment1.target=boolean\ shouldDrawFromDiscardPile(int,\ int[])
+comment2.params=newCardValue\ hand
+comment2.target=int\ getIndexForReplacementCard(int,\ int[])
+comment3.params=hand
+comment3.target=int[]\ findAscendingHand(int[])
+comment4.params=hi\ lo\ higherVal\ lowerVal
+comment4.target=boolean\ checkIfPossible(int,\ int,\ int,\ int)
+comment5.params=value\ ascHand
+comment5.target=boolean\ determineUse(int,\ int[])
+comment6.params=drawCard\ hi\ lo
+comment6.target=boolean\ withinRange(int,\ int,\ int)
+comment7.params=card\ bestAscendingHand
+comment7.target=int\ choosePosition(int,\ int[])
+comment7.text=\ Choose\ a\ position\ for\ the\ card\ to\ be\ placed.\ This\ is\ assuming\ that\ it\ has\n\ already\ been\ determined\ that\ the\ card\ can\ be\ used.\ Look\ for\ the\ range\ it\ falls\n\ in\ and\ place\ the\ card\ next\ to\ the\ card\ with\ the\ closer\ value.\n
+comment8.params=card\ hand
+comment8.target=int\ chooseBestPossibleIndex(int,\ int[])
+numComments=9

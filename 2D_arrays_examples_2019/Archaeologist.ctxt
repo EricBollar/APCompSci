@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=name\ affiliation\ idNum
+comment0.target=Archaeologist(java.lang.String,\ java.lang.String,\ int)
+comment1.params=
+comment1.target=java.lang.String\ getName()
+comment2.params=
+comment2.target=java.lang.String\ getAffiliation()
+comment3.params=
+comment3.target=int\ getIdNum()
+numComments=4

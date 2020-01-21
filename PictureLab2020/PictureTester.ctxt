@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=PictureTester
+comment0.text=\n\ This\ class\ contains\ class\ (static)\ methods\n\ that\ will\ help\ you\ test\ the\ Picture\ class\ \n\ methods.\ \ Uncomment\ the\ methods\ and\ the\ code\n\ in\ the\ main\ to\ test.\n\ \n\ @author\ Barbara\ Ericson\ \n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2

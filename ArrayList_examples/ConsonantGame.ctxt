@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=ConsonantGame
+comment1.params=
+comment1.target=void\ run()
+comment2.params=event
+comment2.target=void\ keyPressed(java.awt.event.KeyEvent)
+comment3.params=
+comment3.target=acm.graphics.GLabel\ getRandomLabel()
+numComments=4

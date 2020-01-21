@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Tiles
+comment1.params=
+comment1.target=void\ run()
+comment10.params=event
+comment10.target=void\ mouseClicked(java.awt.event.MouseEvent)
+comment11.params=event
+comment11.target=boolean\ isShiftKeyDown(java.awt.event.MouseEvent)
+comment2.params=message
+comment2.target=void\ showEndMessage(java.lang.String)
+comment3.params=
+comment3.target=void\ initializeTiles()
+comment4.params=
+comment4.target=int\ playGame()
+comment5.params=
+comment5.target=boolean\ allSameColor()
+comment6.params=
+comment6.target=boolean\ checkerBoard()
+comment7.params=
+comment7.target=boolean\ ring()
+comment8.params=
+comment8.target=boolean\ stripes()
+comment9.params=tile
+comment9.target=void\ toggleTileColor(acm.graphics.GRect)
+numComments=12

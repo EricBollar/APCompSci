@@ -22,7 +22,7 @@ public class McCoveyGUI extends Program
     public void init()
     { 
         playerClassNames = new TreeSet<String>();
-        addPlayerClass("RandomPlayer");
+        addPlayerClass("myPlayer");
         addPlayerClass("GetTo9Player");
         setSize(900,300);
         setLayout(new GridLayout(2,1));

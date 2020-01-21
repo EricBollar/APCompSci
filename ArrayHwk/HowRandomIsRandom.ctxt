@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=HowRandomIsRandom
+comment1.params=
+comment1.target=void\ run()
+comment2.params=nums
+comment2.target=void\ fillWithRandoms(int[])
+comment2.text=\ Precondition\:\ nums\ is\ initially\ empty\n\ \ \ \ \ \ \ \ Postcondition\:\ each\ element\ of\ nums\ should\ be\ filled\ with\ \n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ a\ random\ number\ in\ the\ range\ [0,\ NUMPOSSIBILITIES)\n
+comment3.params=nums
+comment3.target=int[]\ createFreqs(int[])
+comment3.text=\ Precondition\:\ each\ element\ of\ nums\ is\ filled\ with\ \n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ a\ random\ number\ in\ the\ range\ [0,\ NUMPOSSIBILITIES)\n\ \ \ \ \ \ \ \ Postcondition\:\ returns\ an\ array\ of\ ints\ representing\ the\ "frequencies"\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ of\ the\ values\ in\ nums;\ that\ is,\ result[0]\ should\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ equal\ the\ number\ of\ zeros\ in\ the\ array\ nums,\ result[1]\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ should\ equal\ the\ number\ of\ ones\ in\ the\ array\ nums,\ \n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ and\ so\ on\n
+comment4.params=freqs
+comment4.target=void\ printFreqs(int[])
+comment4.text=\ Precondition\:\ freqs\ is\ filled\ with\ values\ representing\ frequencies\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ of\ values\n\ \ \ \ \ \ \ \ Postcondition\:\ this\ method\ should\ print\ out\ something\ similar\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ to\ the\ following\:\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Number\ of\ 0s\ \=\ 104119\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Number\ of\ 1s\ \=\ 99327\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Number\ of\ 2s\ \=\ 100875\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ...and\ so\ on...\n
+numComments=5

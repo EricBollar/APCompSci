@@ -12,7 +12,15 @@ public class Traffic extends GraphicsProgram
 
     public void run()
     {
-        setSize(1200, NUMLANES*VEHICLEHEIGHT);        
+        setSize(1200, NUMLANES*VEHICLEHEIGHT);  
+        
+        GImage[] vehicles = new GImage[NUMLANES];
+        double[] speeds = new double[NUMLANES];
+        for (int i = 0; i < vehicles.length; i++) {
+            int num = (int)(Math.random()*NUMTYPES);
+            vehicles[i] = new GImage("vehicle" + num + ".jpg", (int)(Math.random() * 1200), VEHICLEHEIGHT*i);
+            add(vehicles[i]);
+        }
     }
 
 }

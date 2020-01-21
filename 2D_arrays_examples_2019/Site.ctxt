@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Site
+comment1.params=people\ rows\ cols
+comment1.target=Site(java.util.ArrayList,\ int,\ int)
+comment2.params=affiliation
+comment2.target=int\ clearSomeQuadrants(java.lang.String)
+comment3.params=
+comment3.target=void\ printSiteInfo()
+numComments=4

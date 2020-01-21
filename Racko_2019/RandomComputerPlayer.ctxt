@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=topCardInDiscardPile\ hand
+comment0.target=boolean\ shouldDrawFromDiscardPile(int,\ int[])
+comment1.params=newCardValue\ hand
+comment1.target=int\ getIndexForReplacementCard(int,\ int[])
+numComments=2

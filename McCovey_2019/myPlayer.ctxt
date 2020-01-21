@@ -1,5 +1,9 @@
 #BlueJ class context
 comment0.target=myPlayer
-comment1.params=myScore\ yourScore\ turnScore
-comment1.target=boolean\ rollAgain(int,\ int,\ int)
-numComments=2
+comment1.params=
+comment1.target=myPlayer()
+comment2.params=myScore\ theirScore\ turnScore
+comment2.target=boolean\ rollAgain(int,\ int,\ int)
+comment3.params=myScore\ turnScore
+comment3.target=void\ updateTurnRolls(int,\ int)
+numComments=4

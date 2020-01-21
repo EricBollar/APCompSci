@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=GameOfLifePanel
+comment0.text=\nThis\ panel\ displays\ the\ game\ of\ life.\n
+comment1.params=
+comment1.target=GameOfLifePanel()
+comment2.params=r\ c
+comment2.target=int\ numNeighbors(int,\ int)
+comment3.params=
+comment3.target=void\ playOneTurn()
+comment4.params=
+comment4.target=void\ addTheMouseListener()
+comment5.params=g
+comment5.target=void\ paintComponent(java.awt.Graphics)
+comment6.params=x\ y
+comment6.target=void\ toggleLocation(int,\ int)
+numComments=7

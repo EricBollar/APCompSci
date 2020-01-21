@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Particle
+comment1.params=particleType\ particleColor
+comment1.target=Particle(int,\ java.awt.Color)
+comment2.params=
+comment2.target=int\ getType()
+comment3.params=
+comment3.target=java.awt.Color\ getColor()
+numComments=4

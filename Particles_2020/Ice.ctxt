@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Ice
+comment1.params=
+comment1.target=Ice()
+comment2.params=
+comment2.target=int\ getCounter()
+comment3.params=
+comment3.target=void\ incrementCounter()
+numComments=4

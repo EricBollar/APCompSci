@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=ClassModerator
+comment1.params=givenName
+comment1.target=ClassModerator(java.lang.String)
+comment2.params=student
+comment2.target=java.lang.String\ giveAdvice(Student)
+numComments=3

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Opossum
+comment1.params=
+comment1.target=Opossum()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=actor
+comment3.target=boolean\ isFriend(info.gridworld.actor.Actor)
+comment4.params=actor
+comment4.target=boolean\ isFoe(info.gridworld.actor.Actor)
+numComments=5

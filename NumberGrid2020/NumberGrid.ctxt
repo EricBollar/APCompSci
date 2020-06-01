@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=NumberGrid
+comment1.params=
+comment1.target=void\ run()
+comment2.params=
+comment2.target=void\ waitForReturn()
+comment3.params=grid
+comment3.target=void\ printGrid(int[][])
+comment4.params=grid
+comment4.target=int[][]\ getVerticallySymmetricGrid(int[][])
+comment5.params=grid
+comment5.target=int[][]\ getEvenOddCheckerboardGrid(int[][])
+numComments=6

@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=FileHelper
+comment1.params=filename
+comment1.target=java.lang.String\ getFileContents(java.lang.String)
+numComments=2

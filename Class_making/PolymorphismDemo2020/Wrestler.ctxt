@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Wrestler
+comment1.params=first\ last\ minWeight\ maxWeight
+comment1.target=Wrestler(java.lang.String,\ java.lang.String,\ int,\ int)
+comment2.params=opponentWeight
+comment2.target=void\ wrestle(int)
+numComments=3

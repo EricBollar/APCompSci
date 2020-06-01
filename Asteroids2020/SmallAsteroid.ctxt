@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=SmallAsteroid
+comment1.params=width\ height
+comment1.target=SmallAsteroid(int,\ int)
+numComments=2

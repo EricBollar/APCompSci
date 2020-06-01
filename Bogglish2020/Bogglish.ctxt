@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Bogglish
+comment1.params=
+comment1.target=void\ run()
+comment10.params=score
+comment10.target=void\ writeHighScore(int)
+comment2.params=board
+comment2.target=void\ printAllWords(java.lang.String[][])
+comment3.params=board
+comment3.target=void\ printBoard(java.lang.String[][])
+comment4.params=board
+comment4.target=void\ createBoard(java.lang.String[][])
+comment5.params=word\ board
+comment5.target=boolean\ checkWord(java.lang.String,\ java.lang.String[][])
+comment5.text=\ Returns\ true\ if\ the\ word\ is\ "contained"\ somewhere\ in\ the\ board,\n\ \ following\ our\ "Bogglish"\ rules,\ false\ otherwise.\n\ \ @param\ word\ the\ word\ to\ check\n\ \ @param\ board\ the\ Bogglish\ board\n\ \ @return\ true\ if\ the\ word\ is\ in\ the\ board,\ false\ otherwise.\n
+comment6.params=foundWords\ word
+comment6.target=boolean\ wordAlreadyFound(java.util.ArrayList,\ java.lang.String)
+comment7.params=word
+comment7.target=boolean\ isRealWord(java.lang.String)
+comment8.params=letter\ board
+comment8.target=Position\ getLetterPosition(java.lang.String,\ java.lang.String[][])
+comment8.text=\ Returns\ the\ Position\ of\ where\ the\ letter\ is\ in\ the\ board\n\ \ Note\ that\ this\ returns\ a\ Position,\ which\ is\ a\ class\ you\ wrote.\n\ \ @param\ letter\ a\ String\ of\ length\ 1\ representing\ the\ letter\n\ \ @param\ board\ the\ Bogglish\ board\n\ \ @return\ the\ Position\ of\ the\ letter,\ or\ null\ if\ it\ is\ not\ there\ \n
+comment9.params=
+comment9.target=int\ readHighScore()
+numComments=11

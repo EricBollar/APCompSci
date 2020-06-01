@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Ship
+comment1.params=w\ h
+comment1.target=Ship(int,\ int)
+comment2.params=
+comment2.target=Bullet\ makeBullet()
+numComments=3

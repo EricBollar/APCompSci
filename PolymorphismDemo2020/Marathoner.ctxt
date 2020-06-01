@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Marathoner
+comment1.params=first\ last\ number
+comment1.target=Marathoner(java.lang.String,\ java.lang.String,\ int)
+comment2.params=
+comment2.target=int\ getBibNumber()
+comment3.params=raceLength
+comment3.target=void\ race(double)
+numComments=4

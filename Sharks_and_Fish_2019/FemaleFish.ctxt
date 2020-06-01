@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=FemaleFish
+comment1.params=
+comment1.target=FemaleFish()
+comment2.params=actors
+comment2.target=void\ processActors(java.util.ArrayList)
+comment3.params=
+comment3.target=void\ giveBirth()
+comment4.params=
+comment4.target=java.util.ArrayList\ getFreeSpaces()
+comment5.params=
+comment5.target=void\ becomePregnant()
+comment6.params=adj
+comment6.target=info.gridworld.actor.Actor\ getActorAdj(int)
+comment7.params=
+comment7.target=java.util.ArrayList\ getActors()
+numComments=8

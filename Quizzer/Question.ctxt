@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Question
+comment1.params=
+comment1.target=java.lang.String\ getQuestion()
+comment2.params=
+comment2.target=java.lang.String\ getAnswer()
+comment3.params=response
+comment3.target=boolean\ isCorrect(java.lang.String)
+numComments=4

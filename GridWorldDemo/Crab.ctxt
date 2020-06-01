@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Crab
+comment1.params=
+comment1.target=Crab()
+comment2.params=
+comment2.target=java.util.ArrayList\ getMoveLocations()
+comment3.params=loc
+comment3.target=void\ makeMove(info.gridworld.grid.Location)
+comment4.params=actors
+comment4.target=void\ processActors(java.util.ArrayList)
+comment5.params=
+comment5.target=java.util.ArrayList\ getActors()
+numComments=6

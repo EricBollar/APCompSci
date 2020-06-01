@@ -95,6 +95,20 @@ public class Picture extends SimplePicture
         }
 
     }  
-    
+
+    public void insert(Picture picToInsert, int insertRow, int insertCol) {
+        Pixel[][] pixels = getPixels2D();
+        Pixel[][] pixelsToInsert = picToInsert.getPixels2D();
+
+        for (int r = insertRow; r < insertRow + pixelsToInsert.length; r++) {
+            for (int c = insertCol; c < insertCol + pixelsToInsert[0].length; c++) {
+                if (r >= 0 && r < pixels.length && c >= 0 && c < pixels[0].length) {
+                }
+                if (pixelsToInsert[r-insertRow][c-insertCol].colorDistance(Color.green) > 50) {
+                    pixels[r][c].setColor(pixelsToInsert[r-insertRow][c-insertCol].getColor());
+                }
+            }
+        }
+    }
 
 } // this } is the end of class Picture, put all new methods before this

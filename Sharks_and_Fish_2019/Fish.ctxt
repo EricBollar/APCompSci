@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Fish
+comment1.params=
+comment1.target=Fish()
+comment2.params=
+comment2.target=void\ checkAge()
+comment3.params=
+comment3.target=int\ getAge()
+comment4.params=
+comment4.target=void\ act()
+comment5.params=actors
+comment5.target=void\ processActors(java.util.ArrayList)
+numComments=6

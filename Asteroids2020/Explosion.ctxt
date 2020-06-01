@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Explosion
+comment1.params=w\ h
+comment1.target=Explosion(int,\ int)
+comment2.params=
+comment2.target=boolean\ moving()
+comment3.params=
+comment3.target=void\ updatePosition()
+numComments=4

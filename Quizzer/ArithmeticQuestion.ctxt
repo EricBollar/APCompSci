@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=ArithmeticQuestion
+comment1.params=
+comment1.target=ArithmeticQuestion()
+comment2.params=
+comment2.target=java.lang.String\ getQuestion()
+comment3.params=
+comment3.target=java.lang.String\ getAnswer()
+comment4.params=response
+comment4.target=boolean\ isCorrect(java.lang.String)
+numComments=5

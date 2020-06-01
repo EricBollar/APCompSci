@@ -21,4 +21,6 @@ comment6.target=java.lang.String\ toString()
 comment6.text=\n\ Method\ to\ return\ a\ string\ with\ information\ about\ this\ picture.\n\ @return\ a\ string\ with\ information\ about\ the\ picture\ such\ as\ fileName,\n\ height\ and\ width.\n
 comment7.params=
 comment7.target=void\ zeroBlue()
-numComments=8
+comment8.params=picToInsert\ insertRow\ insertCol
+comment8.target=void\ insert(Picture,\ int,\ int)
+numComments=9

@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Asteroid
+comment1.params=width\ height
+comment1.target=Asteroid(int,\ int)
+comment2.params=
+comment2.target=void\ updatePosition()
+numComments=3

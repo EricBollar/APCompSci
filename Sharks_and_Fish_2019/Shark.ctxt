@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Shark
+comment1.params=
+comment1.target=Shark()
+comment2.params=actors
+comment2.target=void\ processActors(java.util.ArrayList)
+comment3.params=
+comment3.target=java.util.ArrayList\ getMoveLocations()
+comment4.params=adj
+comment4.target=info.gridworld.actor.Actor\ getActorAdj(int)
+comment5.params=
+comment5.target=java.util.ArrayList\ getActors()
+comment6.params=
+comment6.target=void\ makeRandomTurn()
+comment7.params=left
+comment7.target=void\ makeTurn(boolean)
+comment8.params=
+comment8.target=void\ act()
+numComments=9

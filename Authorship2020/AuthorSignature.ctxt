@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=AuthorSignature
+comment1.params=authorName\ avgWordLength\ differentWordRatio\ hapaxRatio\ avgWordsPerSentence\ avgPhrasesPerSentence
+comment1.target=AuthorSignature(java.lang.String,\ double,\ double,\ double,\ double,\ double)
+comment2.params=
+comment2.target=java.lang.String\ getAuthorName()
+comment3.params=
+comment3.target=double\ getAverageWordLength()
+comment4.params=
+comment4.target=double\ getDifferentWordRatio()
+comment5.params=
+comment5.target=double\ getHapaxRatio()
+comment6.params=
+comment6.target=double\ getAverageWordsPerSentence()
+comment7.params=
+comment7.target=double\ getAveragePhrasesPerSentence()
+numComments=8

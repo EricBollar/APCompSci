@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Athlete
+comment1.params=first\ last\ sportPlayed
+comment1.target=Athlete(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=hours
+comment2.target=void\ train(double)
+comment3.params=
+comment3.target=java.lang.String\ getName()
+comment4.params=
+comment4.target=java.lang.String\ getSport()
+comment5.params=
+comment5.target=double\ getHoursTraining()
+numComments=6
